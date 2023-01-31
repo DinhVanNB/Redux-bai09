@@ -18,15 +18,15 @@ export default function Product() {
                 <div className='hstack text-center 
                         product
                      border-end p-5'>
-                    <img src={state.title? state.image:productSelect.image} 
+                    <img src={state? state.image:productSelect.image} 
                     className='mx-auto  h-100 w-75'/>
                 </div>
                 <div className=' p-5 vstack'>
                     <div>
-                        <h3>{state.title? state.title:productSelect.title}</h3>
+                        <h3>{state? state.title:productSelect.title}</h3>
                     </div>
                     <div className='mt-3'>
-                        <h2>${state.price}</h2>
+                        <h2>${state?state.price:productSelect.price}</h2>
                     </div>
                     <div className='mt-3 text-white'>
                         <h5 className='
@@ -34,11 +34,11 @@ export default function Product() {
                         bg-secondary 
                         bg-opacity-25 border 
                         pt-3 py-3 px-2 rounded'>
-                        ${state.category}
+                        ${state?state.category:productSelect.category}
                         </h5>
                     </div>
                     <div className='mt-3'>
-                        <p className='text-muted'>{state.title?state.description:productSelect.description}</p>
+                        <p className='text-muted'>{state?state.description:productSelect.description}</p>
                     </div>
                     <div className='mt-3'>
                          <button 
